@@ -1,0 +1,172 @@
+.current {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    border: 5px solid #1E1E8A;
+    border-radius: 20px;
+
+    &__info {
+        max-width: 400px;
+        width: 100%;
+        box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+        border-radius: 20px; 
+        padding: 20px;
+        position: relative;
+        
+    }
+
+    &__deg {
+        color: #4793FF;
+        font-size: 96px;
+        font-weight: 500;
+        text-transform: capitalize;
+        
+    }
+
+    &__day{
+        font-size: 40px;
+        margin-top: -11px;
+        color: var(--color-alt);
+        font-weight: 500;
+        text-transform: capitalize;    
+    }
+
+    &__time, &__city {
+        color: var(--color-alt);
+        font-size: 25px;
+        margin-top: 31px;
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+
+    &__city {
+        margin-top: 14px;
+    }
+
+    &__img {
+        position: absolute;
+        top: 46px;
+        right: 20px;
+        width: 119px;
+    }
+
+    &__content {
+        max-width: 750px;
+        width: 100%;
+        box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+        padding: 44px 32px;
+        border-radius: 20px;
+        gap: 20px;
+        display: grid;
+        background: url(../../assets/img/map.png) no-repeat top right;
+    }
+
+    &__card {
+        display: grid;
+        grid-template-columns: 38px 100px max-content;
+        font-size: 14px;
+        gap: 20px;
+        align-items: center;
+    }
+
+    &__icon {
+        box-shadow: 1px 4px 10px -1px rgba(71, 147, 255, 0.2);
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    &__name {
+        color: var(--color-alt);
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: capitalize;
+        text-align: left;
+        line-height: 1.2;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    &__desc{
+        color: var(--color-alt);
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+}
+.current {
+    display: flex;
+    gap: 20px;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .current__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .current__country,
+  .current__city,
+  .current__deg,
+  .current__day,
+  .current__time,
+  .current__description {
+    margin: 0;
+  }
+  
+  .current__deg {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .current__img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .current__content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .current__card {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .current__icon img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .current__name,
+  .current__desc {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+  .loading,
+  .error {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+  
+  .error {
+    color: #ff4d4d;
+  }

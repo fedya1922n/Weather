@@ -1,0 +1,129 @@
+@import url(./fonts.scss);
+
+:root {
+    --fontBase: 'Montserrat';
+    --body: #fff;
+    --color: #000;
+    --color-alt: #939CB0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    color: var(--color);
+    background: linear-gradient(to top, #89f7fe, #66a6ff);
+    font-family: var(--fontBase);
+    transition: background 1s ease;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 12px;
+    max-width: 1224px;
+    width: 100%;
+    flex: 1 0 auto;
+}
+
+input, textarea, button {
+    color: inherit;
+    background: transparent;
+    font-family: inherit;
+    border: none;
+    outline: none;
+    font-size: inherit;
+}
+
+.loading {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        max-width: 100px;
+        animation: spin 2s linear infinite;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+        animation: pulse 3s ease-in-out infinite;
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 0.2; }
+    100% { transform: scale(1); opacity: 0.5; }
+}
+
+body.morning {
+    background: linear-gradient(to top, #f9d5e5, #f0e4d7, #b9e1ff);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body.noon {
+    background: linear-gradient(to top, #87ceeb, #ffeb99);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body.evening {
+    background: linear-gradient(to top, #ff8c61, #d66d93, #8a4af3);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body.night {
+    background: linear-gradient(to top, #1b263b, #2e3b4e, #415a77);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.error {
+    color: #ff4d4d;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 50px;
+}
